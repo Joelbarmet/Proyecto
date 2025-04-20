@@ -1,25 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Plumbing</title>
+    <title>Panel - PLUMBING</title>
     <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-    <img src="images/logo.png" alt="Logo" class="logo" />
-    <h1>Plumbing</h1>
-    <nav class="menu">
-        <ul>
-            <li><a href="#">Opción 1</a></li>
-            <li><a href="#">Opción 2</a></li>
-            <li><a href="#">Opción 3</a></li>
-            <li><a href="#">Opción 4</a></li>
-            <li><a href="#">Opción 5</a></li>
-        </ul>
-    </nav>
-</body>
 
+    <header class="header">
+        <img src="images/logo.png" alt="Logo PLUMBING" class="logo" />
+        <h1>Bienvenido a tu panel de control</h1>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Clientes</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Reparaciones</a></li>
+                <li><a href="#">Facturación</a></li>
+                <li><a href="index.html">Cerrar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dashboard">
+        <section class="bienvenida">
+            <h2>Hola, [Nombre del usuario]</h2>
+            <p>¿Qué quieres hacer hoy?</p>
+        </section>
+
+        <section class="accesos-rapidos">
+            <div class="card"><a href="#">➕ Nuevo Cliente</a></div>
+            <div class="card"><a href="#">🛠️ Registrar Reparación</a></div>
+            <div class="card"><a href="#">💳 Generar Factura</a></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 PLUMBING - Sistema de Gestión</p>
+    </footer>
+
+</body>
 </html>
