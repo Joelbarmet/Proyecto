@@ -7,8 +7,8 @@ $base = "plumbing";
 
 $conexion = new mysqli($servidor, $usuario, $contraseñaBD, $base);
 
-if ($conexion->conexion_error) {
-    die("Error al conectar con la base de datos: " . $conexion->conexion_error);
+if ($conexion->connect_error) {
+    die("Error al conectar con la base de datos: " . $conexion->connect_error);
 }
 
 if (isset($_POST["registrar"])) {
