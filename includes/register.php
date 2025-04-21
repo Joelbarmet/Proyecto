@@ -12,20 +12,20 @@ if ($conexion->connect_error) {
 }
 
 if (isset($_POST["registrar"])) {
-    
+
     $nombre = $_POST["nombre"];
     $telefono = $_POST["telefono"];
     $email = $_POST["email"];
     $contraseña = $_POST["contraseña"];
 
-    $insertar = $conexion->prepare("INSERT INTO empleados (nombre, telefono, email, contraseña) VALUES (?, ?, ?, ?)");
+    $insertar = "INSERT INTO empleados (nombre, telefono, email, contraseña) VALUES ("$nombre", "$telefono", "$email", "$contraseña")";
     
-    $insertar->bind_param("ssss", $nombre, $telefono, $email, $contraseña);
+    $resultado = mysqli_query($conexion,$insertar);
 
-    if ($insertar->execute()) {
+    if ($resultado) {
         echo "Registro exitoso";
     } else {
-        echo "Error al registrar: " . $insertar->error;
+        echo "Error al registrar"
     }
 
     $insertar->close();
