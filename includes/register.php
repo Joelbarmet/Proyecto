@@ -7,8 +7,8 @@ $base = "plumbing";
 
 $conexion = new mysqli($servidor, $usuario, $contraseñaBD, $base);
 
-if ($conexion->connect_error) {
-    die("Error al conectar con la base de datos: " . $conexion->connect_error);
+if ($conexion->conexion_error) {
+    die("Error al conectar con la base de datos: " . $conexion->conexion_error);
 }
 
 if (isset($_POST["registrar"])) {
@@ -19,16 +19,16 @@ if (isset($_POST["registrar"])) {
     $email = $_POST["email"];
     $contraseña = password_hash($_POST["contraseña"], PASSWORD_DEFAULT);
 
-    $stmt = $conexion->prepare("INSERT INTO empleados (nombre, usuario, telefono, email, contraseña) VALUES (?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssss", $nombre, $usuario, $telefono, $email, $contraseña);
+    $consulta = $conexion->prepare("INSERT INTO empleados (nombre, usuario, telefono, email, contraseña) VALUES (?, ?, ?, ?, ?)");
+    $consulta->bind_param("sssss", $nombre, $usuario, $telefono, $email, $contraseña);
 
-    if ($stmt->execute()) {
+    if ($consulta->execute()) {
         echo "Registro exitoso";
     } else {
-        echo "Error al registrar: " . $stmt->error;
+        echo "Error al registrar: " . $consulta->error;
     }
 
-    $stmt->close();
+    $consulta->close();
 }
 
 $conexion->close();
