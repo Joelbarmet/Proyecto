@@ -5,15 +5,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Plumbing</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
 </head>
 
 <body>
     <img src="images/logo.png" alt="Logo" class="logo" />
     <h1>Iniciar Sesión</h1>
-    <form>
-        <input type="text" placeholder="Nombre de usuario" required />
-        <input type="password" placeholder="Contraseña" required />
+    <form action="/includes/login.php" method="POST">
+        <input type="text" name="nombre" placeholder="Nombre de usuario" required />
+        <input type="password" name="contraseña" placeholder="Contraseña" required />
         <button type="submit">Entrar</button>
     </form>
     <p>¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
