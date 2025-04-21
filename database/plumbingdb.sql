@@ -6,6 +6,7 @@ USE plumbing;
 CREATE TABLE empleados (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(100) NOT NULL,
+    usuario VARCHAR(100) NOT NULL,
     telefono VARCHAR(20),
     email VARCHAR(100),
     contraseña VARCHAR(255) NOT NULL

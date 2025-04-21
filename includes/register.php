@@ -1,35 +1,34 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
 
 $servidor = "localhost";
 $usuario = "root";
-$clave = "";
+$contraseñaBD = "";
 $base = "plumbing";
 
-$conexion = new mysqli($servidor, $usuario, $clave, $base);
+$conexion = new mysqli($servidor, $usuario, $contraseñaBD, $base);
 
 if ($conexion->connect_error) {
     die("Error al conectar con la base de datos: " . $conexion->connect_error);
 }
 
 if (isset($_POST["registrar"])) {
-    echo "Formulario enviado correctamente.<br>"; 
 
     $nombre = $_POST["nombre"];
+    $usuario = $_POST["usuario"];
     $telefono = $_POST["telefono"];
     $email = $_POST["email"];
-    $contraseña = $_POST["contraseña"];
+    $contraseña = password_hash($_POST["contraseña"], PASSWORD_DEFAULT);
 
-    $insertar = "INSERT INTO empleados (nombre, telefono, email, contraseña) VALUES ("$nombre", "$telefono", "$email", "$contraseña")";
-    
-    $resultado = mysqli_query($conexion,$insertar);
+    $stmt = $conexion->prepare("INSERT INTO empleados (nombre, usuario, telefono, email, contraseña) VALUES (?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssss", $nombre, $usuario, $telefono, $email, $contraseña);
 
-    if ($resultado) {
+    if ($stmt->execute()) {
         echo "Registro exitoso";
     } else {
-        echo "Error al registrar"
+        echo "Error al registrar: " . $stmt->error;
     }
+
+    $stmt->close();
 }
 
 $conexion->close();
