@@ -27,8 +27,6 @@ if (isset($_POST["registrar"])) {
     } else {
         echo "Error al registrar"
     }
-
-    $insertar->close();
 }
 
 $conexion->close();
