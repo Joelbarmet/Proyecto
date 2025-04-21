@@ -12,7 +12,8 @@ if ($conexion->connect_error) {
 }
 
 if (isset($_POST["registrar"])) {
-
+    echo "Formulario enviado correctamente.<br>"; 
+    
     $nombre = $_POST["nombre"];
     $telefono = $_POST["telefono"];
     $email = $_POST["email"];
