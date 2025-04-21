@@ -1,4 +1,6 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 
 $servidor = "localhost";
 $usuario = "root";
@@ -13,7 +15,7 @@ if ($conexion->connect_error) {
 
 if (isset($_POST["registrar"])) {
     echo "Formulario enviado correctamente.<br>"; 
-    
+
     $nombre = $_POST["nombre"];
     $telefono = $_POST["telefono"];
     $email = $_POST["email"];
