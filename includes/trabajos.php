@@ -21,7 +21,7 @@ $resultado = $conexion->query($consulta);
 
 if ($resultado->num_rows > 0) {
     echo "<table border='1'>";
-    echo "<tr><th>ID</th><th>ID_Cliente</th><th>ID_Emlpeado</th><th>ID_Sevicio</th><th>Tipo</th><th>Fecha</th><th>Estado</th></tr>";
+    echo "<tr><th>ID</th><th>Cliente</th><th>Emlpeado</th><th>Sevicio</th><th>Tipo</th><th>Fecha</th><th>Estado</th></tr>";
 
     while ($fila = $resultado->fetch_assoc()) {
         echo "<tr>";
