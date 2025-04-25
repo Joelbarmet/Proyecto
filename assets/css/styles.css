@@ -40,10 +40,6 @@ h1 {
   font-weight: 700;
 }
 
-h2 {
-  margin-top: -20px;
-}
-
 .menu ul {
   display: flex;
   justify-content: center;
@@ -95,9 +91,8 @@ main.panel-de-control {
 }
 
 .bienvenida h2 {
-  font-size: 22px;
+  font-size: 20px;
   color: #195caa;
-  font-weight: 600;
 }
 
 .bienvenida p {
