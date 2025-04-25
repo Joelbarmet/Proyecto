@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Panel - PLUMBING</title>
+    <title>Ventas - PLUMBING</title>
     <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
@@ -11,16 +11,21 @@
     <header class="header">
         <img src="assets/images/logo.png" alt="Logo PLUMBING" class="logo" />
         <h1>Ventas</h1>
-        <nav class="menu">
-            <ul>
-                <li><a href="includes/ventas.php">Ver Registros</a></li>
-                <li><a href="includes/nueva_venta.php">Agregar</a></li>
-                <li><a href="includes/eliminar_venta.php">Eliminar</a></li>
-                <li><a href="includes/modificar_venta.php">Actualizar</a></li>
-                <li><a href="main.html">Regresar</a></li>
-            </ul>
-        </nav>
     </header>
+
+    <main class="panel-de-control">
+        <section class="bienvenida">
+            <h2>Bienvenido a la sección de Ventas</h2>
+            <p>¿Qué acción deseas realizar hoy?</p>
+        </section>
+
+        <section class="accesos-rapidos">
+            <div class="card"><a href="includes/ventas.php">📜 Ver Registros</a></div>
+            <div class="card"><a href="includes/nueva_venta.php">➕ Nueva Venta</a></div>
+            <div class="card"><a href="includes/eliminar_venta.php">❌ Eliminar Venta</a></div>
+            <div class="card"><a href="includes/modificar_venta.php">✏️ Actualizar Venta</a></div>
+            <div class="card"><a href="main.html">🔙 Regresar</a></div>
+        </section>
     </main>
 
     <footer class="footer">

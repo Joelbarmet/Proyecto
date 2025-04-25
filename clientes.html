@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Panel - PLUMBING</title>
+    <title>Clientes - PLUMBING</title>
     <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
@@ -11,16 +11,21 @@
     <header class="header">
         <img src="assets/images/logo.png" alt="Logo PLUMBING" class="logo" />
         <h1>Clientes</h1>
-        <nav class="menu">
-            <ul>
-                <li><a href="includes/clientes.php">Ver Registros</a></li>
-                <li><a href="includes/nuevo_cliente.php">Agregar</a></li>
-                <li><a href="includes/eliminar_cliente.php">Eliminar</a></li>
-                <li><a href="includes/modificar_cliente.php">Actualizar</a></li>
-                <li><a href="main.html">Regresar</a></li>
-            </ul>
-        </nav>
     </header>
+
+    <main class="panel-de-control">
+        <section class="bienvenida">
+            <h2>Bienvenido a la sección de Clientes</h2>
+            <p>¿Qué acción deseas realizar hoy?</p>
+        </section>
+
+        <section class="accesos-rapidos">
+            <div class="card"><a href="includes/clientes.php">📜 Ver Registros</a></div>
+            <div class="card"><a href="includes/nuevo_cliente.php">➕ Nuevo Cliente</a></div>
+            <div class="card"><a href="includes/eliminar_cliente.php">❌ Eliminar Cliente</a></div>
+            <div class="card"><a href="includes/modificar_cliente.php">✏️ Actualizar Cliente</a></div>
+            <div class="card"><a href="main.html">🔙 Regresar</a></div>
+        </section>
     </main>
 
     <footer class="footer">

@@ -40,7 +40,11 @@ h1 {
   font-weight: 700;
 }
 
-nav.menu ul {
+h2 {
+  margin-top: -20px;
+}
+
+.menu ul {
   display: flex;
   justify-content: center;
   padding: 0;
@@ -67,6 +71,14 @@ nav.menu ul {
 
 .menu li:hover {
   background-color: #0056b3;
+}
+
+.menu-input {
+  display: none;
+}
+
+.menu-icono {
+  display: none;
 }
 
 main.panel-de-control {
@@ -104,8 +116,8 @@ main.panel-de-control {
 .card {
   background-color: #007BFF;
   color: white;
-  padding: 20px;
-  width: 200px;
+  padding: 18px;
+  width: 250px;
   border-radius: 8px;
   text-align: center;
   cursor: pointer;
@@ -115,7 +127,6 @@ main.panel-de-control {
 .card:hover {
   background-color: #0056b3;
 }
-
 
 .card a {
   text-decoration: none;
@@ -132,30 +143,50 @@ footer.footer {
 }
 
 @media (max-width: 768px) {
-  .logo {
-    width: 150px;
+  .menu-barra {
+    background-color: #007BFF;
+    padding: 10px 0;
+    border-radius: 8px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  h1 {
-    font-size: 20px;
+  .menu-icono {
+    width: 30px;
+    cursor: pointer;
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    background-color: #007BFF;
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+    padding: 10px;
   }
 
   .menu ul {
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    gap: 5px;
   }
 
-  .menu li {
-    width: 100%;
-    margin: 5px 0;
+  .menu-input {
+    display: none;
+  }
+
+  .menu-input:checked+.menu-barra+.menu {
+    display: block;
+  }
+
+  .bienvenida {
+    margin-top: -40px;
   }
 
   .accesos-rapidos {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .card {
-    width: 100%;
+    margin-bottom: 40px;
   }
 }
